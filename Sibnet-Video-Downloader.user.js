@@ -3,7 +3,7 @@
 // @version     1.0
 // @date        2013-09-29
 // @author      Aleksandr Logvinov <aleksandr@logvinov.net>
-// @download	http://logvinov.net/files/video.sibnet.ru_save.js
+// @download	https://github.com/logvinov/Sibnet-Video-Downloader/raw/master/Sibnet-Video-Downloader.user.js
 //
 // @grant       none
 // @include http://video.sibnet.ru/video*
