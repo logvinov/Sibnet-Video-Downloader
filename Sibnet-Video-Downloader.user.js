@@ -3,7 +3,7 @@
 // @version     1.0
 // @date        2013-09-29
 // @author      Aleksandr Logvinov <aleksandr@logvinov.net>
-// @download	http://logvinov.net/files/video.sibnet.ru_save.js
+// @download	https://github.com/logvinov/Sibnet-Video-Downloader/raw/master/Sibnet-Video-Downloader.user.js
 //
 // @grant       none
 // @include http://video.sibnet.ru/video*
@@ -16,8 +16,16 @@
 
 (function(){
 	document.addEventListener('DOMContentLoaded', function(){
-	   var video_link=jwplayer('player_container').config.file;
-	   var target_div = top.document.getElementById('video_text');
-	   target_div.innerHTML = '<p><a href="http://video.sibnet.ru/' + video_link + '" title="Скачать видео">Скачать видео</a></p>'+target_div.innerHTML;
+	   if (jwplayer('player_container') != undefined) {
+	       var video_link='<p><a href="http://video.sibnet.ru/' + jwplayer('player_container').config.file + '" title="Скачать видео">Скачать видео</a></p>';
+	       var target_div = top.document.getElementById('video_text');
+	       if (target_div == undefined) {
+	           target_div = top.document.getElementById('video');
+	           target_div.innerHTML = target_div.innerHTML + video_link;
+	       }
+	       else {
+	           target_div.innerHTML = video_link + target_div.innerHTML;
+	       }
+	   }
 	}, false);
 })();
