@@ -1,4 +1,4 @@
 Sibnet-Video-Downloader
 =======================
 
-Sibnet Video Downloader userJS
+UserJS скрипт, который добавляет на страницах сайта video.sibnet.ru ссылку на скачивание видеофайла.
